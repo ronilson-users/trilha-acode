@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  
+ 
+
+<body>
+  <div class="container-trail">
+   
+   
+   <div class="btns">
+    
+  <!-- btn top-->
+  <button onclick="openModal()" class="btn-task">Adicionar Tarefa</button>
+<button onclick="openModal()" class="btn-task">Dashboard</button>
+ <p></p>
+    
+   </div>
+  
+
+     <!--Modal -->
+  <div class="modal" id="task-modal">
+<!--     <div class="screen-backdrop"></div> -->
+
+  <div class="container-modal">
+   
+   <select id="trail-select" class="select"></select>
+    <input type="text" id="task-input" class="input-task" placeholder="Nova tarefa">
+    <div class="checkbox-container">
+      <label>
+        <input type="checkbox" id="add-multiple-tasks">
+        Adicionar múltiplas tarefas
+      </label>
+      </div>
+   
+   
+   
+  </div>
+
+
+    
+      
+    
+  
+  <!--btn modal-->
+    <div class="btns">
+     
+           <button class="btn-close" onclick="closeModal()">Fechar</button>
+     
+     
+      <button class="btn-task" onclick="addTask()">Adicionar</button>
+
+    </div>
+
+  </div>
+  
+  <!-- div container-->
+  <div class="task-container">
+   <div class="task-list">
+     <ul id="task-list"></ul>
+   </div>
+   
+  </div>
+  
+   
+  </div>
+  
+  <!--Script-->  
+<script src="scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+:root {
+  --padding-small: 5px;
+  --padding-medium: 10px;
+  --padding-large: 2rem;
+  --padding-input-button: 10px;
+  --margin-small: 0.5rem;
+  --margin-medium: 1rem;
+  --border-radius-small: 2px;
+  --border-color-focus: #242424;
+  --background-color: #000000;
+  --background-color-secondary: #333333;
+  --background-color-task: #222222;
+  --background-color-highlight: #242424;
+  --color-primary: #242424;
+  --color-secondary: #242424;
+  --color-highlight: #242424;
+
+}
+
+body {
+  padding: var(--padding-medium);
+  background-color: var(--background-color);
+}
+
+.container-trail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.screen-backdrop {
+  width: 135%;
+  height: 25rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 50% 50%;
+  background-color: #838B90;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.modal {
+  width: 100%;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: var(--background-color-secondary);
+  padding: var(--padding-large);
+  z-index: 10;
+  border: 1px solid var(--color-highlight);
+  color: var(--color-primary);
+}
+
+.modal.show {
+  display: block;
+}
+
+.text-decoration {
+  margin-left: 5px;
+}
+
+.select,
+.input-task,
+.btn-task {
+  display: block;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius-small);
+  padding: var(--padding-input-button);
+  background-color: var(--background-color-task);
+  color: #f5f6f5;
+}
+
+.input-task:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--border-color-focus);
+}
+
+.btn-close,
+.btn-task {
+  width: 150px;
+  background-color: var(--background-color-secondary);
+  color: var(--color-primary);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-container {
+  padding-left: 10px;
+  width: 100%; /* Ajuste conforme necessário */
+  margin:auto 0; /* Centraliza horizontalmente a task-container */
+  margin-top: var(--margin-medium);
+  background-color: var(--background-color);
+  color: #60646e;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza verticalmente os itens */
+ border:1px solid #FFFF; 
+ overflow-y: auto;
+ 
+}
+.teste{
+ border: 1px solid yellow;
+
+}
+
+.task-list {
+  width: 100%; /* Ajuste conforme necessário */
+  list-style-type: none; /* Remove marcadores de lista */
+  padding: 0;
+  margin-right:-15px;
+}
+
+.btn-close:hover,
+.btn-task:hover {
+  background-color: #00b376;
+}
+
+.checkbox-container {
+  margin: 5px;
+}
+
+.trail-header {
+  background-color: var(--background-color-secondary);
+ color: var(--color-highlight);
+ font-weight: bold;
+ border-radius: var(--border-radius-small);
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ width: 100%; 
+ 
+}
+
+.task-item {
+  background-color: var(--background-color-task);
+  border-radius: var(--border-radius-small);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* padding: var(--padding-small); */
+  margin-bottom: var(--margin-small);
+}
+
+.task-item input[type="checkbox"] {
+  margin-right: var(--margin-small);
+}
+
+.trail-tasks {
+  border-radius: var(--border-radius-small);
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: var(--margin-medium);
+}
+
+.icon-trail {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  padding: 2px;
+  border: 1px solid lightcyan;
+  background-color: grey;
+  color: var(--color-primary);
+  border-radius: 2px;
+  margin-right: 2px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  backdrop-filter: blur(9px );
+}
+
+.icon-trail.show {
+  display: flex;
+}
+
+.icon-trail.completed {
+  transform: translateX(180px);
+  background-color: #303247;
+}
